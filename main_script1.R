@@ -42,7 +42,7 @@ for (i in 1:100) {
   obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 50, no_c = 25, no_o = 25)
   result <- ACS_Alg_M(obs_gen_para, kei = j, lambda, cost)
   
-  results_1[i, ] <- list(
+  results_1[7*(i-1) + j + 1, ] <- list(
     Run = 7*(i-1) + j + 1,
     N_t = 25,
     K = j,
@@ -77,7 +77,7 @@ for (i in 1:100) {
   obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 75, no_c = 25, no_o = 50)
   result <- ACS_Alg_M(obs_gen_para, kei = j, lambda, cost)
   
-  results_2[i, ] <- list(
+  results_2[7*(i-1) + j + 1, ] <- list(
     Run = 7*(i-1) + j + 1,
     N_t = 50,
     K = j,
