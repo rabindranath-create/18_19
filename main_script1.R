@@ -44,7 +44,7 @@ for (i in 1:100) {
   
   results_1[i, ] <- list(
     Run = 7*(i-1) + j + 1,
-    N_t = j,
+    N_t = 25,
     K = j,
     Length = result$Length_total,
     Cost = result$Cost_total,
@@ -79,7 +79,7 @@ for (i in 1:100) {
   
   results_2[i, ] <- list(
     Run = 7*(i-1) + j + 1,
-    N_t = j,
+    N_t = 50,
     K = j,
     Length = result$Length_total,
     Cost = result$Cost_total,
