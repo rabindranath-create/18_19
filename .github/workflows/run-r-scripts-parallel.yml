@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        script: [1, 2, 3, 4 , 11, 21, 31, 41]  # Runs 5 scripts in parallel
+        script: [4,  21, 31, 40, 41, 211, 311, 411]  # Runs 5 scripts in parallel
 
     name: Run main_script${{ matrix.script }}.R
     steps:
