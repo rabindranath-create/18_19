@@ -62,44 +62,10 @@ saveRDS(results_1, file.path(output_dir, "data_25_1_3.rds"))
 
 
 
-results_2 <- data.frame(
-  Run = integer(),
-  N_t = integer(),
-  K = integer(),
-  Length = numeric(),
-  Cost = numeric(),
-  NumDisambigs = integer()
-)
-
-cost <- 5
-
-for (i in 1:100) {
-  for (j in 0:6){
-  obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 150, no_c = 50, no_o = 100)
-  result <- ACS_Alg_M(obs_gen_para, kei = j, lambda, cost)
-  
-  results_2[7*(i-1) + j + 1, ] <- list(
-    Run = 7*(i-1) + j + 1,
-    N_t = 100,
-    K = j,
-    Length = result$Length_total,
-    Cost = result$Cost_total,
-    NumDisambigs = length(result$Disambiguate_state)
-    )
-  }
-}
-
-saveRDS(results_2, file.path(output_dir, "data_25_1_4.rds"))
-
-
-
-
-
-
 
 
 # Combine all results into one table
-results <- rbind(results_1, results_2)
+results <- results_1
 
 # Format output
 results_out <- data.frame(
