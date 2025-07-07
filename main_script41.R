@@ -39,6 +39,7 @@ cost <- 5
 
 
 for (i in 1:100) {
+  set.seed(400+i)
   for (j in 0:6){
   obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 175, no_c = 100, no_o = 75)
   result <- ACS_Alg_M(obs_gen_para, kei = j, lambda, cost)
